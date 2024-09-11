@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Creacion de terceros de tipo cliente para el sistema" skipped="0" tests="1" time="10.16" timestamp="2024-09-10 07:23:04"><testcase name="creacion de un tercero tipo cliente con estado activo"><error message="com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement" type="java.lang.ClassCastException">com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement</error><system-err>com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement&#13;
-com.siigo.pages.LoginSiigo.getShadowRootElement(LoginSiigo.java:32)&#13;
-com.siigo.pages.LoginSiigo.getInputField(LoginSiigo.java:38)&#13;
-com.siigo.pages.LoginSiigo.enterUsername(LoginSiigo.java:43)&#13;
-com.siigo.tasks.IniciarSesionSiigo.performAs(IniciarSesionSiigo.java:34)&#13;
-com.siigo.stepdefinitions.clientes.CrearClienteStepDefinition.queSeIngresaAPaginaSiigoComo(CrearClienteStepDefinition.java:39)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-</system-err></testcase></testsuite>

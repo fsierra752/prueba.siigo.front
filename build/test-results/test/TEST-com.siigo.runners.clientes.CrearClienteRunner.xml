@@ -7,7 +7,7 @@
 
 1 Scenarios (?[31m1 failed?[0m)
 4 Steps (?[31m1 failed?[0m, ?[36m3 skipped?[0m)
-0m12,113s
+0m12,183s
 
 java.lang.ClassCastException: com.google.common.collect.Maps$TransformedEntriesMap cannot be cast to org.openqa.selenium.WebElement
 	at com.siigo.pages.LoginSiigo.getShadowRootElement(LoginSiigo.java:32)

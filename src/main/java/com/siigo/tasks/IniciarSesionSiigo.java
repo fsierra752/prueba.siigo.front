@@ -1,8 +1,8 @@
 package com.siigo.tasks;
 
-import com.siigo.interactions.Esperar;
+import com.siigo.interactions.EsperarInteraction;
 import com.siigo.models.DatosLoginUsuarioModel;
-import com.siigo.pages.LoginSiigo;
+import com.siigo.pages.LoginSiigoPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -14,15 +14,15 @@ public class IniciarSesionSiigo implements Task {
 
     private final List<DatosLoginUsuarioModel> datosLoginUsuarioModelList;
 
-    private final LoginSiigo loginSiigo;
+    private final LoginSiigoPage loginSiigo;
 
-    public IniciarSesionSiigo(List<DatosLoginUsuarioModel> datosLoginUsuarioModelList, LoginSiigo loginSiigo) {
+    public IniciarSesionSiigo(List<DatosLoginUsuarioModel> datosLoginUsuarioModelList, LoginSiigoPage loginSiigoPage) {
         this.datosLoginUsuarioModelList = datosLoginUsuarioModelList;
-        this.loginSiigo = loginSiigo;
+        this.loginSiigo = loginSiigoPage;
     }
 
-    public static Performable conLasCredenciales(List<DatosLoginUsuarioModel> datosLoginUsuarioModels, LoginSiigo loginSiigo) {
-        return Tasks.instrumented(IniciarSesionSiigo.class, datosLoginUsuarioModels, loginSiigo);
+    public static Performable conLasCredenciales(List<DatosLoginUsuarioModel> datosLoginUsuarioModels, LoginSiigoPage loginSiigoPage) {
+        return Tasks.instrumented(IniciarSesionSiigo.class, datosLoginUsuarioModels, loginSiigoPage);
     }
 
     @Override
@@ -30,6 +30,6 @@ public class IniciarSesionSiigo implements Task {
         loginSiigo.enterUsername(datosLoginUsuarioModelList.get(0).getUser());
         loginSiigo.enterPassword(datosLoginUsuarioModelList.get(0).getPassword());
         loginSiigo.clicBotonIngresar();
-        Esperar.unMomento(5);
+        EsperarInteraction.unMomento(5);
     }
 }
